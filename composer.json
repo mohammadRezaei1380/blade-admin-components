@@ -1,0 +1,28 @@
+{
+  "name": "mohammadrezaei1380/blade-admin-components",
+  "description": "A set of reusable Blade components for admin panels.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohammad Rezaei",
+      "email": "your-email@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BladeAdminComponents\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BladeAdminComponents\\BladeAdminComponentsServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "illuminate/support": "^10.0"
+  }
+}
