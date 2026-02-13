@@ -46,15 +46,11 @@ Example: Text Input
 
 Example: Select
 
-@include('blade-admin::select', [
-    'name' => 'category',
-    'options' => [
-        'tech' => 'Technology',
-        'life' => 'Lifestyle',
-        'news' => 'News'
-    ],
-    'value' => old('category')
-])
+@include('admin.__components.select-2-ajax', [
+    'name' => 'tags',
+    'isMultiple' => true,
+    'url' => route('admin.tags.search.ajax'),
+ ])
 
 
 
