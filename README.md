@@ -12,14 +12,17 @@ Require the package via Composer:
 ```bash
 composer require mohammadrezaei1380/blade-admin-components
 
-Publish the views (optional, if you want to customize):
+
 php artisan vendor:publish --provider="BladeAdminComponents\BladeAdminComponentsServiceProvider" --tag=views
 
+
 Add the Service Provider to config/app.php (Laravel < 5.5, for auto-discovery it's not needed):
+
 
 'providers' => [
     BladeAdminComponents\BladeAdminComponentsServiceProvider::class,
 ];
+
 
 
 🛠 Usage
@@ -32,10 +35,14 @@ Example: Text Input
 @include('blade-admin::input-text', [
     'name' => 'title',
     'placeholder' => 'Enter the article title',
-    'value' => old('title'),
 ])
 
-@input-text(['name' => 'title', 'placeholder' => 'Enter the article title'])
+@include('blade-admin::input-text', [
+    'name' => 'price',
+    'hastNumberFormatLabel' => true,
+    'value' => 1234567
+])
+
 
 Example: Select
 
@@ -49,11 +56,7 @@ Example: Select
     'value' => old('category')
 ])
 
-@include('blade-admin::input-text', [
-    'name' => 'price',
-    'hastNumberFormatLabel' => true,
-    'value' => 1234567
-])
+
 
 
 🔧 Available Components
